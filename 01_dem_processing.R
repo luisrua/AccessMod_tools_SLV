@@ -110,7 +110,7 @@ dem
 # 2 Reproject to Equal Area crs ================================================
 
 dem_rep <- project(dem,"ESRI:54034",
-                 method = 'near',
+                 method = 'bilinear',
                  res = 100)
 
 # AccessMod seems to not like float and covert all values into barriers...
