@@ -1,4 +1,4 @@
-#01_dem_processing
+##### 01_dem_processing
 # This script collects, filters and process Digital Elevation Model for AccessMod (AM)
 
 # Luis de la Rua Dec 2025
@@ -42,7 +42,7 @@ el_salvador_ee <- countries$filter(ee$Filter$eq("ADM0_NAME", "El Salvador"))
 # Extract geometry for clipping later
 region_geometry <- el_salvador_ee$geometry()
 
-## 1.4 GET NASADEM DATA ----
+## 1.4 Get Nasadem data ----
 
 # Asset ID: NASA/NASADEM_HGT/001
 # We select 'elevation' (height in meters). Other bands like 'slope' exist too.
@@ -67,7 +67,7 @@ task <- ee_image_to_drive(
 task$start()
 message("Export task started on GEE servers...")
 
-## 1.5 MONITOR & DOWNLOAD (The "R in the Middle" automation) ----
+## 1.5 Monitor & Download (The "R in the Middle" automation) ----
 
 # This loop checks the status every 10 seconds until finished.
 message("Waiting for GEE to finish processing (this clips and saves to Drive)...")
