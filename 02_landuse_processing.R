@@ -5,6 +5,8 @@
 # Luis de la Rua December 2025
 
 # SETTINGS ----
+# Clean environment
+gc()
 source("setup.R")
 # Additional libraries
 
