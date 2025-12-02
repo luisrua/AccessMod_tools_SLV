@@ -6,6 +6,10 @@
 # DEM processing is the first step to start a new project in AM environment
 
 # SETTINGS ----
+# Clean workspace
+rm(list = ls())
+gc()
+
 source("setup.R")
 # Additional libraries
 

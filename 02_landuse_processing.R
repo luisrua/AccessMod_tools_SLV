@@ -7,6 +7,7 @@
 # SETTINGS ----
 # Clean environment
 gc()
+rm(list = ls())
 source("setup.R")
 # Additional libraries
 
