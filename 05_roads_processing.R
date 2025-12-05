@@ -1,4 +1,4 @@
-#05_roads_processing
+# 05_roads_processing
 # This script collects, filters and process Roads and Waterways input datasets 
 # from HDX as input to carry out Health Facilities accessibility assessment
 
@@ -142,4 +142,4 @@ View(as.data.frame(road_input))
 
   
 # Export into layer format to be accessed by qGIS (gpkg has better handling) and by AccessMod (only reads shp)
-writeVector(road_input, paste0(dir,"am_input/lroads_speed_54034.shp"), overwrite=T)
+writeVector(road_input, paste0(dir,"am_input/hf_paho_54034.shp"), overwrite=T)
