@@ -25,9 +25,13 @@ ab <- vect(paste0(dir, "raw_data/unfpa_slv_nooficial.gpkg"), layer = 'distrital'
 # Reproject
 ab <- project(ab, "ESRI:54034")
 
+# Converting unique id into integer so AM can read it properly
+ab <- ab %>% 
+  mutate(NA3 = as.integer(NA3))
+
 # Export
 writeVector(ab,paste0(dir,"am_input/distritos_54034.shp"), overwrite = T)
 
 
-
-  
+class(ab$NA3)
+as_intege  
